@@ -14,9 +14,9 @@ $(document).ready(function() {
                     $("#jumboSignup").hide(400);
                     $("#jumboRegistered").show(400);
                 });
-                $("#formCadastro").submit( function() {
-                    return false;    
-                });
+                // $("#formCadastro").submit( function() {
+                //     return false;    
+                // });
             }
         });    
     });
