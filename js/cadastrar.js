@@ -26,5 +26,6 @@ $(document).ready(function() {
 
     $('#btnLimpar').click(function() {
         $('#formCadastro').trigger('reset');
+        return false;
     });
 });
