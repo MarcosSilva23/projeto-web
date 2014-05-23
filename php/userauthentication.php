@@ -9,20 +9,31 @@
 		$msg = "Username and Password Mandatory - from PHP";
 	else{
 		// Realiza o SELECT e cria uma sessão para o usuário
-		$sql = mysqli_query($conn, "SELECT * FROM usuarios WHERE login = '$login' and senha = '$passw'") or die(mysqli_error());
-		$row = mysqli_num_rows($sql);
+		$result = mysqli_query($conn, "SELECT * FROM usuarios WHERE login = '$login' and senha = '$passw'") or die(mysqli_error());
+		$qtd_rows = mysqli_num_rows($result);
 
-		if($row > 0){
+		if(!$result){
+			// Avisa o user que o email ou senha informados estão incorretos
+			echo "E-mail or password invalid - from PHP";
+		}else if($qtd_rows<1){
+			// Avisa o user que não há ninguem cadastrado no db
+			echo "Maybe the login entered isn't registred in our website";
+		}else{
+			// Retorna sucesso
 			session_start();
 			$_SESSION['inputEmail'] = $_POST['inputEmail'];
 			$_SESSION['inputPassword'] = $_POST['inputPassword'];
 
+			// Criar um cookie com o email do user e um tempo de timeout
 			setcookie('user', $_POST['inputEmail'], time()+3600);
 
-			echo $_SESSION['inputEmail'];
-		}else{
-			// Avisa o usuário que o email ou senha informados estão incorretos
-			echo "E-mail or password invalid - from PHP";
+			// Cria um array com json para retornar ao jQuery
+			for ($i=0; $i < $qtd_rows; $i++) { 
+				$json[] = mysqli_fetch_assoc($result);
+			}
+
+			// Retorno no formato json legível
+			echo json_encode($json, JSON_PRETTY_PRINT);
 		}
 	}
 ?>
