@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#btnSignup').click(function() {
-        $('div#jumboWelcome').hide(400);
-        $('div#jumboSignup').show(400);
+        $('#jumboWelcome').hide(400);
+        $('#jumboSignup').show(400);
     });
   
     $("#btnCadastrar").click( function() {
@@ -10,7 +10,7 @@ $(document).ready(function() {
                 $("#formCadastro div").addClass('has-error');
             else{
                 $.post( $("#formCadastro").attr("action"), $("#formCadastro :input").serializeArray(), function(data) {
-                    $("h3#registered").html(data);
+                    $("#registered").html(data);
                     $("#jumboSignup").hide(400);
                     $("#jumboRegistered").show(400);
                 });
@@ -19,8 +19,8 @@ $(document).ready(function() {
     });
 
     $('#btnCancelar').click(function() {
-        $('div#jumboWelcome').show(400);
-        $('div#jumboSignup').hide(400);
+        $('#jumboWelcome').show(400);
+        $('#jumboSignup').hide(400);
         return false;
     });
 
