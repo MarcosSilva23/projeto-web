@@ -19,7 +19,6 @@
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/cadastro.js"></script> 
     <script type="text/javascript" src="js/login.js"></script>
-    <script type="text/javascript" src="js/consulta_top3.js"></script>
     <script type="text/javascript" src="js/cadastrar.js"></script>
     <script type="text/javascript" src="js/preparaPagina.js"></script>
   </head>
@@ -134,6 +133,7 @@
           <h2>Top 3 apostadores</h2>
           <p>Aqui ficam os três apostaores mais bem pontuados. </p>
           <ol id="listaNomes">
+                <?php include 'php/consulta_top3.php' ?>
           </ol>
           <p><a class="btn btn-default" id="btnSaibaMais">Confira a lista completa &raquo;</a></p>
         </div>
