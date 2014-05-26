@@ -15,6 +15,7 @@ $(document).ready(function() {
                     $("#jumboRegistered").show(400);
                 });
             }
+            return false;
         });    
     });
 

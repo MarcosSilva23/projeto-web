@@ -2,8 +2,9 @@ $(document).ready(function() {
 	var items = "";
 
 	$("#btnLogin").click( function() {
-	 	if( ($("#inputEmail").val() == "") || ($("#inputPassword").val() == "") )
+	 	if( ($("#inputEmail").val() == "") || ($("#inputPassword").val() == "") ){
 	 		$("#formLogin div").addClass('has-error');
+	 	}
 		else {
 			$.ajax({
 				  type: "POST",
