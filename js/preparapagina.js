@@ -1,6 +1,10 @@
-$(document).ready(function preparaPagina(){
+function preparaPagina(){
 	$("#divLogout").hide();
 	$("#jumboSignup").hide();
 	$("#jumboRegistered").hide();
 	$("#divRanking").hide();
+};
+
+$(document).ready(function() {
+	preparaPagina();
 });

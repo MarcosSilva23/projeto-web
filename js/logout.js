@@ -1,6 +1,7 @@
 $(document).ready(function(){
-	var url = "index.html";
-	$("button#btnLogout").click(function() {
+	var url = "index.php";
+	$("#btnLogout").click(function() {
 		$('body').load( url );
+		preparapagina();
 	});
 });

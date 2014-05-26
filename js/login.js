@@ -26,7 +26,11 @@ $(document).ready(function() {
 				  			items += retorno[i].sobrenome + " - ";
 				  			items += retorno[i].login;
 				  		}
-						alert( "Data Saved: " + items );
+				  		$("#formLogin").hide(400);
+				  		$("#divSignup").hide(400);
+				  		$("#pLogout").append(retorno[0].nome);
+				  		$("#divLogout").show(400);
+						// alert( "Data Saved: " + items );
 				  	}
 				  }
 			});

@@ -12,8 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
@@ -24,13 +24,14 @@
     <script type="text/javascript" src="js/button.js"></script>
     <script type="text/javascript" src="js/cadastro.js"></script> 
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
     <script type="text/javascript" src="js/cadastrar.js"></script>
     <script type="text/javascript" src="js/preparapagina.js"></script>
     <script type="text/javascript" src="js/ranking.js"></script>
     <script type="text/javascript" src="js/homepage.js"></script>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -40,35 +41,43 @@
             <li><a id="linkRanking" data-toggle="tab" href="#ranking"><span class="glyphicon glyphicon-sort-by-attributes"></span> Ranking</a></li>
             <!-- <li><a href="#bet">Ranking</a></li> --> <!-- Aqui da pra adicionar mais botões -->
           </ul>
-          <div class="navbar-form navbar-right" id="divFormLogin" >
-            <form id="formLogin" class="pull-left navbar-form" role="form" action="php/userauthentication.php" action="post">
-              <div class="form-group">
-                <input type="text" placeholder="Email" class="form-control" name="inputEmail" id="inputEmail" required>
-              </div>
-              <div class="form-group">
-                <input type="password" placeholder="Password" class="form-control" name="inputPassword" id="inputEmail" required>
-              </div>
-              <button id="btnLogin" type="button" class="btn btn-success">
-                <span class="glyphicon glyphicon-log-in "></span> Log in
-              </button>
-            </form>
-            <div id="divSignup" class="pull-right navbar-form">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-form navbar-left">
+              <form id="formLogin" role="form" action="php/userauthentication.php" action="post">
+                <div class="form-group">
+                  <input type="text" placeholder="Email" class="form-control" name="inputEmail" id="inputEmail" required>
+                  <input type="password" placeholder="Password" class="form-control" name="inputPassword" id="inputEmail" required>
+                </div>
+                <button id="btnLogin" type="button" class="btn btn-success">
+                  <span class="glyphicon glyphicon-log-in "></span> Log in
+                </button>
+              </form>
+            </li>
+            <li id="divSignup" class="navbar-form navbar-right">
               <button id="btnSignup" class="btn btn-info"> 
                 <span class="glyphicon glyphicon-plus-sign"></span> Sign Up
               </button>
-            </div>
-            <div id="divLogout">
+            </li>
+          </ul>
+          <ul id="divLogout" class="nav navbar-nav navbar-form navbar-right">
+            <li>
               <div class="form-group">
-                <p id="pLogout">Qualquer texto</p>
+                <p href="#" id="pLogout">
+                  <span class="badge pull-right">42</span>
+                </p>
               </div>
-              <button id="btnLogout" type="button" class="btn btn-info">
+            </li>
+            <li>
+              <div class="form-group">
+                <button id="btnLogout" type="button" class="btn btn-info">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
-              </button>
-            </div>
-          </div><!--/.navbar-collapse -->
+                </button>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div class="container" id="homePage">
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -154,9 +163,9 @@
       </div> <!-- /container #lists -->
     </div> <!-- /container #homePage -->
 
-    <div class="container" id="divRanking">
+    <div class="container bs-docs-section" id="divRanking">
       <br><br><br>
-      <div id="rankList" class="col-md-4">
+      <div class="bs-example">
         <?php include 'php/ranking.php' ?>
       </div>
     </div> <!-- /container #divRanking -->
