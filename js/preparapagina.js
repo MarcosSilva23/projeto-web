@@ -3,6 +3,7 @@ function preparaPagina(){
 	$("#jumboSignup").hide();
 	$("#jumboRegistered").hide();
 	$("#divRanking").hide();
+	$("#divTimes").hide();
 };
 
 $(document).ready(function() {

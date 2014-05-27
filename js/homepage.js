@@ -1,5 +1,5 @@
 $(document).ready(function() {
 	$("#linkHome").click(function() {
-		preparaPagina();
+		window.location.replace("index.php");
 	});
 });

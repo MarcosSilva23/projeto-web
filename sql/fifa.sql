@@ -92,16 +92,21 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `pontos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `login`, `senha`, `pontos`) VALUES
-(1, 'José Rafael', 'Braga', 'rafael', 'teste', 12),
-(2, 'rafael', 'braga', 'rafael@mail.com', 'senha', 0),
-(3, 'joao', 'vitor', 'mailmail.com', 'teste', 0);
+(20, 'Rafael', 'Braga', 'rafael@mail.com', '698dc19d489c4e4db73e28a713eab07b', 14),
+(22, 'Eduardo', 'Braga', 'eduardo@mail.com', '698dc19d489c4e4db73e28a713eab07b', 8),
+(23, 'Marcos', 'Silva', 'marcos@mail.com', '698dc19d489c4e4db73e28a713eab07b', 5),
+(24, 'Julio', 'Abreu', 'julio@mail.com', '698dc19d489c4e4db73e28a713eab07b', 10),
+(25, 'Carlos', 'Sissudo', 'carlos@mail.com', '698dc19d489c4e4db73e28a713eab07b', 0),
+(26, 'JoÃ£o', 'Aldacir', 'joao@mail.com', '698dc19d489c4e4db73e28a713eab07b', 0),
+(27, 'Paulo', 'Soares', 'paulo@mail.com', '698dc19d489c4e4db73e28a713eab07b', 0),
+(28, 'Romeu', 'Montecchio', 'romeu@mail.com', '698dc19d489c4e4db73e28a713eab07b', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -9,7 +9,7 @@ $(document).ready(function() {
             if($(this).val() == "")
                 $("#formCadastro div").addClass('has-error');
             else{
-                $.post( $("#formCadastro").attr("action"), $("#formCadastro :input").serializeArray(), function(data) {
+               $.post( $("#formCadastro").attr("action"), $("#formCadastro :input").serializeArray(), function(data) {
                     $("#registered").html(data);
                     $("#jumboSignup").hide(400);
                     $("#jumboRegistered").show(400);
@@ -18,6 +18,7 @@ $(document).ready(function() {
             return false;
         });    
     });
+	
 
     $('#btnCancelar').click(function() {
         $('#jumboWelcome').show(400);

@@ -1,3 +1,4 @@
+<?php include 'php/painel.php' ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -22,13 +23,14 @@
     <script type="text/javascript" src="js/tab.js"></script>
     <script type="text/javascript" src="js/tooltip.js"></script>
     <script type="text/javascript" src="js/button.js"></script>
-    <script type="text/javascript" src="js/cadastro.js"></script> 
     <script type="text/javascript" src="js/login.js"></script>
     <script type="text/javascript" src="js/logout.js"></script>
     <script type="text/javascript" src="js/cadastrar.js"></script>
     <script type="text/javascript" src="js/preparapagina.js"></script>
-    <script type="text/javascript" src="js/ranking.js"></script>
+    <script type="text/javascript" src="js/rankingUsers.js"></script>
+    <script type="text/javascript" src="js/paginaTimes.js"></script>
     <script type="text/javascript" src="js/homepage.js"></script>
+	
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -39,6 +41,7 @@
             <li><a id="linkJogos" data-toggle="tab" href="#match-table"><span class="glyphicon glyphicon-list-alt"></span> Tabela dos Jogos</a></li>
             <li><a id="linkAposte" data-toggle="tab" href="#bet"><span class="glyphicon glyphicon-pencil"></span> Aposte!</a></li>
             <li><a id="linkRanking" data-toggle="tab" href="#ranking"><span class="glyphicon glyphicon-sort-by-attributes"></span> Ranking</a></li>
+            <li><a id="linkTimes" data-toggle="tab" href="#times"><span class="glyphicon glyphicon-sort-by-attributes"></span> Times</a></li>
             <!-- <li><a href="#bet">Ranking</a></li> --> <!-- Aqui da pra adicionar mais botões -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -137,8 +140,8 @@
         </div>
       </div> <!-- /Jumbotron Sign up -->
 
-      <div id="jumboRegistered" class="jumbotron">
-        <div class="container">
+      <div class="container" id="jumboRegistered">
+		    <div class="jumbotron">
           <h3 id="registered"></h3>
         </div>
       </div> <!-- /Jumbotron Registered -->
@@ -169,6 +172,13 @@
         <?php include 'php/ranking.php' ?>
       </div>
     </div> <!-- /container #divRanking -->
+	
+	  <div class="container bs-docs-section" id="divTimes">
+      <br><br><br>
+      <div class="bs-example">
+        <?php include 'php/exibetimes.php' ?>
+      </div>
+    </div> <!-- /container #divTimes -->
 
     <hr>
     <footer>
